@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiberSol Application</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <h1>FiberSol</h1>
+    <section>
+        <p>
+            Track your daily fiber intake and bowel health to support long-term wellness.<br> A healthy gut == longvity. 
+        </p>
+    </section>
+    <section>
+        <h2>Find Your Recommended Daily Fiber</h2>
+        <form>
+            <label for="sex">Sex:</label><br>
+            <select id="sex">
+                <option value="">Select</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+            </select>
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" placeholder="Enter your age" />
+            <button type="button" id="calculateBtn">Calculate Fiber Goal</button>
+        </form>
+        <p id="fiberResult"></p>
+    </section>
+    <section>
+        <h3>Fiber Diary</h3>
+        <label for="currentFiber">Grams of fiber consumed for the day:</label><br>
+        <input type="number" id="currentFiber" placeholder="Enter fiber in grams" />
+        <button type="button" id="fiberBtn">Log Fiber</button>
+        <p id="dailyFiber"></p>
+    </section>
+    <section>
+        <h3>Stool Log</h3>
+        <form>
+            <label for="stoolquest">Did you have a bowel movement today?:</label><br>
+            <select id="stoolquest">
+                <option value="">Select</option>
+                <option value="ansone">Yes</option>
+                <option value="anstwo">No</option>
+            </select>
+            <div id="stooldetails">
+            <label for="stooldesc">If you selected yes, was it?:</label><br>
+            <select id="stooldesc">
+                <option value="typeone">Type 1 - Separate hard lumps</option>
+                <option value="typetwo">Type 2 - Lumpy and sausage-like</option>
+                <option value="typethree">Type 3 - Sausage with cracks</option>
+                <option value="typefour">Type 4 - Smooth and soft</option>
+                <option value="typefive">Type 5 - Soft blobs with clear edges</option>
+                <option value="typesix">Type 6 -  Fluffy pieces with ragged edges</option>
+                <option value="typeseven">Type 7 - Watery, no solid pieces</option>
+            </select>
+                <label for="stoolinfo">Additional information:</label><br>
+                <textarea id="stoolinfo" placeholder="Add additional info (optional)..."></textarea>
+                <p id="savedstool"></p>
+                <p id="aiResponse"></p>
+                <button type="button" id="logstool">Log Stool</button>
+            </div>
+        </form>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
